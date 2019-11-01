@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Ray Tracer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vectorexample">
+				<Option output="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/vectorexample" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/math"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 vectorexample"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vectorexample/fast">
+				<Option output="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/vectorexample" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/math"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 vectorexample/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="jsonexample">
+				<Option output="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/jsonexample" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/math"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 jsonexample"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="jsonexample/fast">
+				<Option output="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/jsonexample" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/math"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 jsonexample/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raytracer">
+				<Option output="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/raytracer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/math"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 raytracer"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raytracer/fast">
+				<Option output="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/raytracer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers"/>
+					<Add directory="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/math"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 raytracer/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cameras/Pinhole.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cameras/Pinhole.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cameras/ThinLens.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/cameras/ThinLens.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Camera.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Camera.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/LightSource.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/LightSource.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Material.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Material.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/RayTracer.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/RayTracer.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Scene.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Scene.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Shape.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/core/Shape.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/examples/jsonExample.cpp">
+			<Option target="jsonexample"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/examples/vecMatrixExample.cpp">
+			<Option target="vectorexample"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/lights/AreaLight.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/lights/AreaLight.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/lights/PointLight.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/lights/PointLight.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/main/main.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/materials/BlinnPhong.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/materials/BlinnPhong.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/math/geometry.h">
+			<Option target="vectorexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/allocators.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/cursorstreamwrapper.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/document.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/encodedstream.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/encodings.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/filereadstream.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/filewritestream.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/fwd.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/istreamwrapper.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/memorybuffer.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/memorystream.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/ostreamwrapper.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/pointer.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/prettywriter.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/rapidjson.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/reader.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/schema.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/stream.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/stringbuffer.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/parsers/rapidjson/writer.h">
+			<Option target="jsonexample"/>
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/BVH.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/BVH.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/Sphere.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/Sphere.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/TriMesh.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/TriMesh.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/Triangle.cpp">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/shapes/Triangle.h">
+			<Option target="raytracer"/>
+		</Unit>
+		<Unit filename="/Users/changemashiro/Desktop/CG2020_Assignment2/RayTracer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
