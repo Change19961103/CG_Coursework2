@@ -63,6 +63,22 @@ namespace rt{
         return (h.point - center).normalize();
 	}
 
+	// return the aabb, with min and max point.
+    void Sphere::CalculateBox() {
+	    Vec3f radius_list = (radius, radius, radius);
+	    this->aabbMin = center - radius_list;
+	    this->aabbMax = center + radius_list;
+    }
+
+    Vec3f Sphere::getAABBMin(){
+        return  this->aabbMin;
+	}
+
+	Vec3f Sphere::getAABBMax() {
+	    return this->aabbMax;
+	}
+
+
 
 
 } //namespace rt

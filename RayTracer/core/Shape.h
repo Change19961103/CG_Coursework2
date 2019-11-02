@@ -36,7 +36,11 @@ public:
 
     virtual Vec3f CalculateNorm(Hit h)=0;
 
-    virtual Vec3f getBox()=0;
+    virtual void CalculateBox()=0;
+
+    virtual Vec3f getAABBMax()=0;
+
+    virtual Vec3f getAABBMin()=0;
 
 	// Main Function
 	static Shape* createShape(Value& shapeSpecs);
@@ -45,22 +49,22 @@ public:
 	    return this->material;
 	}
 
-	//Getter
-	Vec3f getShapeCenter(){
-	    return this->center;
-	}
-
-	float getShapeRadius(){
-        return this->radius;
-	}
+//	//Getter
+//	Vec3f getShapeCenter(){
+//	    return this->center;
+//	}
+//
+//	float getShapeRadius(){
+//        return this->radius;
+//	}
 
 //    void checkIntersectSphere(Ray r, Vec3f &norm, Hit &h);
 
 protected:
 
 	Material * material;
-	Vec3f center;
-	float radius;
+//	Vec3f center;
+//	float radius;
 
 
 

@@ -23,14 +23,16 @@ public:
 	//
 	Sphere();
 
-	Sphere(Vec3f center, float radius){
-        Shape::radius = radius;
-        for (int i=0; i<3; i++){
-            Shape::center[i] = center[i];
-        }
+	Sphere(Vec3f center, float radius):center(center), radius(radius){
 	};
 
 	virtual ~Sphere();
+
+    void CalculateBox();
+
+    Vec3f getAABBMin();
+
+    Vec3f getAABBMax();
 
 
 	//
@@ -49,11 +51,16 @@ public:
 //	}
 //
 //
-//private:
-//
-//	Vec3f center;
-//	float radius;
+private:
+
+	Vec3f center;
+	float radius;
+	Vec3f aabbMin;
+	Vec3f aabbMax;
 };
+
+
+
 
 
 

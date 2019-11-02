@@ -41,6 +41,7 @@ namespace rt {
                                       materialSpecs["specularexponent"].GetFloat(), diffuseColor);
 
                 Shape *shape = new Sphere(center, shapeSpecs["radius"].GetFloat());
+                shape->CalculateBox();
                 shape->material = m;
                 return shape;
 

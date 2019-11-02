@@ -13,7 +13,9 @@ namespace rt{
 
 class BVH: public Shape{
 
+    bool checkIntersection();
 
+    void BVHTree(std::vector<Shape *> shape_list);
 };
 
 
