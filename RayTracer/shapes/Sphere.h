@@ -42,6 +42,7 @@ public:
 
     Vec3f CalculateNorm(Hit h);
 
+
 //	float getRadius(){
 //	    return this->radius;
 //	}

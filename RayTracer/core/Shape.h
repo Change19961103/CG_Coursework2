@@ -42,6 +42,7 @@ public:
 
     virtual Vec3f getAABBMin()=0;
 
+
 	// Main Function
 	static Shape* createShape(Value& shapeSpecs);
 
