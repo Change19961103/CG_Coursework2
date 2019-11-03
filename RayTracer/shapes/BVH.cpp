@@ -178,7 +178,9 @@ namespace rt{
         return NULL;
     }
 
-
+    Vec2f BVH::MapTexture(Hit h) {
+        return Vec2f();
+    }
 
 
 } //namespace rt

@@ -59,13 +59,26 @@ namespace rt{
 		return h;
 	}
 
+	Vec2f Sphere::MapTexture(Hit h){
+        Vec3f normalized_hitpoint = Vec3f((h.point - center)[0]/radius,
+                (h.point - center)[1]/radius,
+                (h.point - center)[2]/radius);
+        float theta = acos(normalized_hitpoint[1]);
+        float phi = atan2(normalized_hitpoint[0], normalized_hitpoint[2]);
+        if (phi < 0)
+            phi += 2 * M_PI;
+        float u = phi / (2 * M_PI);
+        float v = theta / (M_PI);
+        return Vec2f(u, v);
+	}
+
 	Vec3f Sphere::CalculateNorm(Hit h){
         return (h.point - center).normalize();
 	}
 
 	// return the aabb, with min and max point.
     void Sphere::CalculateBox() {
-	    Vec3f radius_list = (radius, radius, radius);
+        Vec3f radius_list = Vec3f(radius, radius, radius);
 	    this->aabbMin = center - radius_list;
 	    this->aabbMax = center + radius_list;
     }

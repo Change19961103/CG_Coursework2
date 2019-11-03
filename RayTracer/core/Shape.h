@@ -27,7 +27,6 @@ public:
 	//
 	// Destructor (must be overriden in subclass)
 	//
-	virtual ~Shape();
 
 	//
 	// Shape abstract methods (to be implemented by subclasses)
@@ -42,16 +41,16 @@ public:
 
     virtual Vec3f getAABBMin()=0;
 
-    void ConstructBVHTree(std::vector<Shape*> shape_list);
+    virtual Vec2f MapTexture(Hit h)=0;
+
 
 
 	// Main Function
 	static Shape* createShape(Value& shapeSpecs);
 
-    Shape* returnObj();
 
 
-    Hit checkHit(Ray ray);
+
 
 	Material * getMaterial(){
 	    return this->material;

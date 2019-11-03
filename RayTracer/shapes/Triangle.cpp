@@ -57,11 +57,37 @@ namespace rt{
 
 
 
+    }
+    Vec3f Triangle::CalculateNorm(Hit h){
+        Vec3f edge1 = v1 - h.point;
+        Vec3f edge2 = v2 - h.point;
+        Vec3f norm = edge1.crossProduct(edge2);
+        return norm;
+    };
 
-
-
+    void Triangle::CalculateBox(){
+        float minX = fmin(fmin(v0[0], v1[0]), v2[0]);
+        float minY = fmin(fmin(v0[1], v1[1]), v2[1]);
+        float minZ = fmin(fmin(v0[2], v1[2]), v2[2]);
+        float maxX = fmax(fmax(v0[0], v1[0]), v2[0]);
+        float maxY = fmax(fmax(v0[1], v1[1]), v2[1]);
+        float maxZ = fmax(fmax(v0[2], v1[2]), v2[2]);
+        aabbMax = Vec3f(maxX, maxY, maxZ);
+        aabbMin = Vec3f(minX, minY, minZ);
 
     }
+
+    Vec3f Triangle::getAABBMax(){
+        return this->aabbMax;
+    };
+
+    Vec3f Triangle::getAABBMin(){
+        return this->aabbMin;
+    }
+
+    Vec2f Triangle::MapTexture(Hit h) {
+        return Vec2f();
+    };
 
     ;
 } //namespace rt

@@ -11,7 +11,6 @@
 
 namespace rt {
 
-    Shape::~Shape() {};
 
     Shape *Shape::createShape(Value &shapeSpecs) {
 
@@ -39,27 +38,21 @@ namespace rt {
                 center[i] = shapeSpecs["center"].GetArray()[i].GetFloat();
                 diffuseColor[i] = materialSpecs["diffusecolor"].GetArray()[i].GetFloat();
             }
+            std::string imageDir = materialSpecs["texture_dir"].GetString();
                 Material * m = new Material(materialSpecs["ks"].GetFloat(), materialSpecs["kd"].GetFloat(),
-                                      materialSpecs["specularexponent"].GetFloat(), diffuseColor);
+                                      materialSpecs["specularexponent"].GetFloat(), diffuseColor, imageDir);
 
                 Shape *shape = new Sphere(center, shapeSpecs["radius"].GetFloat());
                 shape->CalculateBox();
                 shape->material = m;
                 return shape;
 
-//                shape->material->setKs(materialSpecs["ks"].GetFloat());
-//                shape->material->setKd(materialSpecs["kd"].GetFloat());
-//                shape->material->setSe(materialSpecs["specularexponent"].GetFloat());
-//                for (int j = 0; j < 3; j++) {
-//                    diffuseColor[j] = materialSpecs["diffusecolor"].GetArray()[j].GetFloat();
-//                }
-//                shape->material->setDc(diffuseColor);
 
-            } else if (shapeType.compare("Plane") == 0) {
+            } else if (shapeType.compare("planar_quad") == 0) {
 
             } else if (shapeType.compare("TriMesh") == 0) {
 
-            } else if (shapeType.compare("Triangle") == 0) {
+            } else if (shapeType.compare("triangle") == 0) {
 
             }
 

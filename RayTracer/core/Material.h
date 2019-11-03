@@ -17,7 +17,7 @@ class Material{
 public:
 
     // Constructor
-    Material(float ks, float kd, float specularexponent, Vec3f diffusecolor);
+    Material(float ks, float kd, float specularexponent, Vec3f diffusecolor, std::string imageDir);
 
 //    Vec3f HitColor(std::vector<LightSource *> light, float ks, float kd, float se, Vec3f diffuseColor, Ray ray, Hit h,
 //                   Vec3f normal);
@@ -56,6 +56,10 @@ public:
         return this->diffusecolor;
     }
 
+    std::string getImageDir(){
+        return this->imageDir;
+    }
+
 
 
 private:
@@ -63,6 +67,7 @@ private:
     float kd;
     float specularexponent;
     Vec3f diffusecolor;
+    std::string imageDir;
 };
 
 

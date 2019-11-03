@@ -42,6 +42,8 @@ public:
 
     Vec3f CalculateNorm(Hit h);
 
+    Vec2f MapTexture(Hit h);
+
 
 //	float getRadius(){
 //	    return this->radius;

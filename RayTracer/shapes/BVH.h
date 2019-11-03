@@ -28,6 +28,8 @@ public:
 
     void CalculateBox();
 
+    Vec2f MapTexture(Hit h);
+
 
 
     std::vector<Shape*> TraverseBVHTree(Ray ray);

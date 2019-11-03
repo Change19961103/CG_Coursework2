@@ -7,8 +7,8 @@
 
 namespace rt{
 
-    Material::Material(float ks, float kd, float specularexponent, Vec3f diffusecolor):
-    ks(ks), kd(kd), specularexponent(specularexponent), diffusecolor(diffusecolor) {}
+    Material::Material(float ks, float kd, float specularexponent, Vec3f diffusecolor, std::string imageDir):
+    ks(ks), kd(kd), specularexponent(specularexponent), diffusecolor(diffusecolor), imageDir(imageDir) {}
 } //namespace rt
 
 

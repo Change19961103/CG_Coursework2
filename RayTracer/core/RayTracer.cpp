@@ -5,7 +5,7 @@
 #include <shapes/Sphere.h>
 #include "RayTracer.h"
 #include "shapes/BVH.h"
-
+#include <opencv2/opencv.hpp>
 
 namespace rt{
 
@@ -39,7 +39,6 @@ Vec3f* RayTracer::render(Camera* camera, Scene* scene, int nbounces){
             *(pix++) = RayTracer::castRay(nbounces, shapes_list, lights_list, ray, bgcolor);
 	    }
 	}
-
 	return pixelbuffer;
 
 }
@@ -121,8 +120,23 @@ Vec3f RayTracer::castRay(int nbounces, const std::vector<Shape*>& shapes_list,
         }
         h = closest->intersect(ray);
         Vec3f norm = closest->CalculateNorm(h);
-        return RayTracer::HitColor(lights_list, closest->getMaterial()->getKs(), closest->getMaterial()->getKd(),
-                                   closest->getMaterial()->getSe(), closest->getMaterial()->getDc(), ray, h, norm);
+        if (closest->getMaterial()->getImageDir() == ""){
+            return RayTracer::HitColor(lights_list, closest->getMaterial()->getKs(), closest->getMaterial()->getKd(),
+                                       closest->getMaterial()->getSe(), closest->getMaterial()->getDc(), ray, h, norm);
+        } else {
+            cv::Mat img = cv::imread("../" + closest->getMaterial()->getImageDir());
+            float u = closest->MapTexture(h).x;
+            float v = closest->MapTexture(h).y;
+            int width = img.cols;
+            int height = img.rows;
+            int mapping_x = (int) ((width - 1) * u);
+            int mapping_y = (int) ((height - 1) * v);
+            Vec3f diffuseColor = Vec3f(img.at<cv::Vec3b>(mapping_x, mapping_y)[0],
+                                       img.at<cv::Vec3b>(mapping_x, mapping_y)[1],
+                                       img.at<cv::Vec3b>(mapping_x, mapping_y)[2]);
+            return RayTracer::HitColor(lights_list, closest->getMaterial()->getKs(), closest->getMaterial()->getKd(),
+                                       closest->getMaterial()->getSe(), diffuseColor, ray, h, norm);
+        }
 
     } else {
         return bgcolor;
