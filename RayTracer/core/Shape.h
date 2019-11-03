@@ -42,9 +42,16 @@ public:
 
     virtual Vec3f getAABBMin()=0;
 
+    void ConstructBVHTree(std::vector<Shape*> shape_list);
+
 
 	// Main Function
 	static Shape* createShape(Value& shapeSpecs);
+
+    Shape* returnObj();
+
+
+    Hit checkHit(Ray ray);
 
 	Material * getMaterial(){
 	    return this->material;
@@ -69,7 +76,8 @@ protected:
 
 
 
-};
+
+    };
 
 
 } //namespace rt

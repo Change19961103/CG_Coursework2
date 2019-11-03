@@ -3,8 +3,6 @@
  *
  */
 #include "Scene.h"
-#include "shapes/Sphere.h"
-
 
 
 
@@ -36,7 +34,11 @@ void Scene::createScene(Value& scenespecs){
         shapes.push_back(Shape::createShape(shapeSpecs[k]));
     }
 
+
 }
+
+
+
 
 
 

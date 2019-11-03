@@ -50,6 +50,7 @@ namespace rt{
         std::vector<Shape*> left_shape_list;
         std::vector<Shape*> right_shape_list;
         this->shape_list = shape_list;
+        CalculateBox();
 
         // sort all shapes
         if (axis == 0) {
@@ -60,12 +61,7 @@ namespace rt{
             sort(shape_list.begin(), shape_list.end(), compare_z);
         }
 
-        if (shape_list.size() == 1){
-            left = right = shape_list[0];
-        } else if (shape_list.size() == 2){
-            left = shape_list[0];
-            right = shape_list[1];
-        } else {
+        if (shape_list.size() > 1){
             int size = shape_list.size()/2;
             for (int i=0; i< size; i++) {
                 left_shape_list.push_back(shape_list[i]);
@@ -103,38 +99,75 @@ namespace rt{
                 minY = shape_list[i]->getAABBMin()[1];
             }
             if (shape_list[i]->getAABBMin()[2] < minZ){
-                minZ = shape_list[i]->getAABBMin()[1];
+                minZ = shape_list[i]->getAABBMin()[2];
             }
-            if (shape_list[i]->getAABBMax()[0] < maxX){
+            if (shape_list[i]->getAABBMax()[0] > maxX){
                 maxX = shape_list[i]->getAABBMax()[0];
             }
-            if (shape_list[i]->getAABBMax()[1] < maxY){
+            if (shape_list[i]->getAABBMax()[1] > maxY){
                 maxY = shape_list[i]->getAABBMax()[1];
             }
-            if (shape_list[i]->getAABBMax()[2] < maxZ){
+            if (shape_list[i]->getAABBMax()[2] > maxZ){
                 maxZ = shape_list[i]->getAABBMax()[2];
             }
         }
-        this->aabbMin = (minX, minY, minZ);
-        this->aabbMax = (maxX, maxY, maxZ);
+        Vec3f a = Vec3f(minX, minY, minZ);
+        Vec3f b = Vec3f(maxX, maxY, maxZ);
+        this->aabbMin = a;
+        this->aabbMax = b;
     }
 
     Hit BVH::intersect(Ray ray){
+        Shape* closest;
+        float distance = MAXFLOAT;
+        Hit h;
+        std::vector<Shape*> hit_shape_list = TraverseBVHTree(ray);
+        std::vector<Shape*> object_hit_list;
+        for (int j=0; j<hit_shape_list.size(); j++){
+            Hit test = hit_shape_list[j]->intersect(ray);
+            if (test.intersection){
+                object_hit_list.push_back(hit_shape_list[j]);
+            }
+        }
+
+        for (int i=0; i<object_hit_list.size(); i++){
+            if (object_hit_list[i]->getAABBMin().norm() < distance){
+                distance = object_hit_list[i]->getAABBMin().norm();
+                closest = object_hit_list[i];
+            }
+        }
+        if (object_hit_list.size() > 0) {
+            this->closest_obj = closest;
+            return closest->intersect(ray);
+        } else {
+            return h;
+        }
+
 
     }
 
-    std::vector<Hit> BVH::TraverseBVHTree(Ray ray){
-        CalculateBox();
-        std::vector<Hit> hit_shape_list = {};
+    std::vector<Shape*> BVH::TraverseBVHTree(Ray ray){
+//        CalculateBox();
+        std::vector<Shape*> hit_shape_list;
         if (checkIntersection(ray, aabbMin, aabbMax)){
             if (shape_list.size() == 1){
                 hit_shape_list.push_back(shape_list[0]);
                 return hit_shape_list;
             } else {
-                if (left->TraverseBVHTree(ray).size() > 0){
-
+                std::vector<Shape*> left_side = left->TraverseBVHTree(ray);
+                std::vector<Shape*> right_side = right->TraverseBVHTree(ray);
+                if (left_side.size() > 0) {
+                    for (int i = 0; i < left_side.size(); i++) {
+                        hit_shape_list.push_back(left_side[i]);
+                    }
                 }
-                right->intersect(ray);
+                if (right_side.size() > 0){
+                    for (int j=0; j<right_side.size(); j++){
+                        hit_shape_list.push_back(right_side[j]);
+                    }
+                    return hit_shape_list;
+                }
+                return hit_shape_list;
             }
         } else {
             return hit_shape_list;
@@ -144,6 +177,8 @@ namespace rt{
     Vec3f BVH::CalculateNorm(Hit h){
         return NULL;
     }
+
+
 
 
 } //namespace rt

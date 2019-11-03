@@ -13,9 +13,7 @@ namespace rt{
 
 class BVH: public Shape{
 
-    // Constructor
-    BVH(std::vector<Shape*> shape_list);
-
+public:
     bool checkIntersection(Ray ray, Vec3f min, Vec3f max);
 
 //    void BVHTree(std::vector<Shape *> shape_list);
@@ -32,18 +30,32 @@ class BVH: public Shape{
 
 
 
-    std::vector<Hit> TraverseBVHTree(Ray ray);
+    std::vector<Shape*> TraverseBVHTree(Ray ray);
 
+    // Getter
+    Shape* getClosestOBJ(){
+        return this->closest_obj;
+    }
+
+
+
+
+
+// Constructor
+    BVH(std::vector<Shape*> shape_list);
+//        static Shape* closest_obj;
 
 private:
     std::vector<Shape*> shape_list;
-    Shape* left;
-    Shape* right;
+    Shape* closest_obj;
+    BVH* left;
+    BVH* right;
     Vec3f aabbMin;
     Vec3f aabbMax;
 
 
-};
+
+    };
 
 
 } //namespace rt

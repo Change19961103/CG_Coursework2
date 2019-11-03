@@ -51,6 +51,8 @@ int main(int argc, char* argv[]){
 	// Main function, render scene
 	//
 	Vec3f* pixelbuffer=RayTracer::render(camera, scene, d["nbounces"].GetInt());
+	// Render with BVH
+//    Vec3f* pixelbuffer=RayTracer::render_BVH(camera, scene, d["nbounces"].GetInt());
 
 
 
@@ -76,7 +78,7 @@ int main(int argc, char* argv[]){
 
     ofs.close();
 
-    delete [] pixelbuffer;
+//    delete [] pixelbuffer;
 
 
 
@@ -85,7 +87,7 @@ int main(int argc, char* argv[]){
 	//write rendered scene to file (pixels RGB values must be in range 0255)
 //	PPMWriter::PPMWriter(camera->getWidth(), camera->getHeight(), pixelbuffer, outputFile);
 
-	//delete pixelbuffer;
+	delete pixelbuffer;
     delete camera;
     delete scene;
 }

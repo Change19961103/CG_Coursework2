@@ -4,7 +4,9 @@
  */
 #include "shapes/Sphere.h"
 #include <iostream>
+#include <shapes/BVH.h>
 #include "Shape.h"
+#include "Scene.h"
 
 
 namespace rt {
@@ -62,6 +64,19 @@ namespace rt {
             }
 
     }
+
+//    void Shape::ConstructBVHTree(std::vector<Shape*> shape_list){
+//        Shape* a = new BVH(shape_list);
+//    }
+//
+//    Hit Shape::checkHit(Ray ray){
+//        Hit h = BVHTree->intersect(ray);
+//        return h;
+//    }
+//     Shape* Shape::returnObj(){
+//        return BVH::closest_obj;
+//    }
+
 
 //        void Shape::checkIntersectSphere(Ray r, Vec3f &norm, Hit &h) {
 //
