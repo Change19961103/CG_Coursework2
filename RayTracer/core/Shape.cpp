@@ -5,6 +5,8 @@
 #include "shapes/Sphere.h"
 #include <iostream>
 #include <shapes/BVH.h>
+#include <shapes/Triangle.h>
+#include <shapes/Planar_quad.h>
 #include "Shape.h"
 #include "Scene.h"
 
@@ -40,19 +42,66 @@ namespace rt {
             }
             std::string imageDir = materialSpecs["texture_dir"].GetString();
                 Material * m = new Material(materialSpecs["ks"].GetFloat(), materialSpecs["kd"].GetFloat(),
-                                      materialSpecs["specularexponent"].GetFloat(), diffuseColor, imageDir);
+                                      materialSpecs["specularexponent"].GetFloat(), diffuseColor);
 
-                Shape *shape = new Sphere(center, shapeSpecs["radius"].GetFloat());
+                Shape *shape = new Sphere(center, shapeSpecs["radius"].GetFloat(), imageDir);
                 shape->CalculateBox();
                 shape->material = m;
                 return shape;
 
 
+            } else if (shapeType.compare("triangle") == 0) {
+
+                Vec3f v0;
+                Vec3f v1;
+                Vec3f v2;
+                Vec3f diffuseColor;
+                Value &materialSpecs = shapeSpecs["material"];
+
+                for (int i = 0; i < 3; i++) {
+                    v0[i] = shapeSpecs["v0"].GetArray()[i].GetFloat();
+                    v1[i] = shapeSpecs["v1"].GetArray()[i].GetFloat();
+                    v2[i] = shapeSpecs["v2"].GetArray()[i].GetFloat();
+                    diffuseColor[i] = materialSpecs["diffusecolor"].GetArray()[i].GetFloat();
+                }
+                std::string imageDir = materialSpecs["texture_dir"].GetString();
+                Material * m = new Material(materialSpecs["ks"].GetFloat(), materialSpecs["kd"].GetFloat(),
+                                            materialSpecs["specularexponent"].GetFloat(), diffuseColor);
+
+                Shape *shape = new Triangle(v0, v1, v2, imageDir);
+                shape->CalculateBox();
+                shape->material = m;
+
+                return shape;
+
+
+
             } else if (shapeType.compare("planar_quad") == 0) {
 
-            } else if (shapeType.compare("TriMesh") == 0) {
+                Vec3f v0;
+                Vec3f v1;
+                Vec3f v2;
+                Vec3f v3;
+                Vec3f diffuseColor;
+                Value &materialSpecs = shapeSpecs["material"];
 
-            } else if (shapeType.compare("triangle") == 0) {
+                for (int i = 0; i < 3; i++) {
+                    v0[i] = shapeSpecs["v0"].GetArray()[i].GetFloat();
+                    v1[i] = shapeSpecs["v1"].GetArray()[i].GetFloat();
+                    v2[i] = shapeSpecs["v2"].GetArray()[i].GetFloat();
+                    v3[i] = shapeSpecs["v3"].GetArray()[i].GetFloat();
+                    diffuseColor[i] = materialSpecs["diffusecolor"].GetArray()[i].GetFloat();
+                }
+                std::string imageDir = materialSpecs["texture_dir"].GetString();
+                Material * m = new Material(materialSpecs["ks"].GetFloat(), materialSpecs["kd"].GetFloat(),
+                                            materialSpecs["specularexponent"].GetFloat(), diffuseColor);
+
+                Shape *shape = new Planar_quad(v0, v1, v2, v3, imageDir);
+                shape->CalculateBox();
+                shape->material = m;
+
+                return shape;
+
 
             }
 

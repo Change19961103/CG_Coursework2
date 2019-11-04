@@ -50,8 +50,8 @@ namespace  rt {
         return triangle1.CalculateNorm(h);
     }
 
-    Vec2f Planar_quad::MapTexture(Hit h) {
-        return Vec2f();
+    Vec3f Planar_quad::MapTexture(Hit h) {
+        return Vec3f();
     }
 
 

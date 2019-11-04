@@ -43,6 +43,54 @@ Vec3f* RayTracer::render(Camera* camera, Scene* scene, int nbounces){
 
 }
 
+    Vec3f RayTracer::castRay(int nbounces, const std::vector<Shape*>& shapes_list,
+                             const std::vector<LightSource*>& lights_list,
+                             Ray ray, Vec3f bgcolor) {
+
+        // Check whether it reaches max bounce
+        if (nbounces < 0) {
+            return bgcolor;
+        }
+
+        std::vector<Shape*> hitted_shapes;
+        Hit h;
+        for (auto i : shapes_list) {
+            if(i->intersect(ray).intersection) {
+                hitted_shapes.push_back(i);
+            }
+        }
+
+        if (hitted_shapes.size() == 1) {
+            Shape *i = hitted_shapes[0];
+            h = i->intersect(ray);
+            Vec3f norm = i->CalculateNorm(h);
+            Vec3f diffuseColor = i->MapTexture(h);
+            return RayTracer::HitColor(lights_list, i->getMaterial()->getKs(), i->getMaterial()->getKd(),
+                                       i->getMaterial()->getSe(), diffuseColor, ray, h, norm);
+        } else if (hitted_shapes.size() > 1){
+            Shape* closest;
+            float distance = MAXFLOAT;
+            for (int i=0; i<hitted_shapes.size(); i++){
+                if (hitted_shapes[i]->getAABBMin().norm() < distance){
+                    distance = hitted_shapes[i]->getAABBMin().norm();
+                    closest = hitted_shapes[i];
+                }
+            }
+            h = closest->intersect(ray);
+            Vec3f norm = closest->CalculateNorm(h);
+            Vec3f diffuseColor = closest->MapTexture(h);
+            return RayTracer::HitColor(lights_list, closest->getMaterial()->getKs(), closest->getMaterial()->getKd(),
+                                           closest->getMaterial()->getSe(), diffuseColor, ray, h, norm);
+
+        } else {
+            return bgcolor;
+
+        }
+
+
+
+    }
+
 
 Vec3f* RayTracer::render_BVH(Camera* camera, Scene* scene, int nbounces) {
     Vec3f *pixelbuffer = new Vec3f[camera->getWidth() * camera->getHeight()];
@@ -86,67 +134,6 @@ Vec3f RayTracer::castRay_BVH(int nbounces, const std::vector<LightSource*>& ligh
 }
 
 
-Vec3f RayTracer::castRay(int nbounces, const std::vector<Shape*>& shapes_list,
-                         const std::vector<LightSource*>& lights_list,
-                         Ray ray, Vec3f bgcolor) {
-
-    // Check whether it reaches max bounce
-    if (nbounces < 0) {
-        return bgcolor;
-    }
-
-    std::vector<Shape*> hitted_shapes;
-    Hit h;
-    for (auto i : shapes_list) {
-        if(i->intersect(ray).intersection) {
-            hitted_shapes.push_back(i);
-        }
-    }
-
-    if (hitted_shapes.size() == 1) {
-        Shape *i = hitted_shapes[0];
-        h = i->intersect(ray);
-        Vec3f norm = i->CalculateNorm(h);
-        return RayTracer::HitColor(lights_list, i->getMaterial()->getKs(), i->getMaterial()->getKd(),
-                                   i->getMaterial()->getSe(), i->getMaterial()->getDc(), ray, h, norm);
-    } else if (hitted_shapes.size() > 1){
-        Shape* closest;
-        float distance = MAXFLOAT;
-        for (int i=0; i<hitted_shapes.size(); i++){
-            if (hitted_shapes[i]->getAABBMin().norm() < distance){
-                distance = hitted_shapes[i]->getAABBMin().norm();
-                closest = hitted_shapes[i];
-            }
-        }
-        h = closest->intersect(ray);
-        Vec3f norm = closest->CalculateNorm(h);
-        if (closest->getMaterial()->getImageDir() == ""){
-            return RayTracer::HitColor(lights_list, closest->getMaterial()->getKs(), closest->getMaterial()->getKd(),
-                                       closest->getMaterial()->getSe(), closest->getMaterial()->getDc(), ray, h, norm);
-        } else {
-            cv::Mat img = cv::imread("../" + closest->getMaterial()->getImageDir());
-            float u = closest->MapTexture(h).x;
-            float v = closest->MapTexture(h).y;
-            int width = img.cols;
-            int height = img.rows;
-            int mapping_x = (int) ((width - 1) * u);
-            int mapping_y = (int) ((height - 1) * v);
-            Vec3f diffuseColor = Vec3f(img.at<cv::Vec3b>(mapping_x, mapping_y)[0],
-                                       img.at<cv::Vec3b>(mapping_x, mapping_y)[1],
-                                       img.at<cv::Vec3b>(mapping_x, mapping_y)[2]);
-            return RayTracer::HitColor(lights_list, closest->getMaterial()->getKs(), closest->getMaterial()->getKd(),
-                                       closest->getMaterial()->getSe(), diffuseColor, ray, h, norm);
-        }
-
-    } else {
-        return bgcolor;
-
-    }
-
-
-
-}
-
 Vec3f RayTracer::HitColor(const std::vector<LightSource*>& light, float ks, float kd, float se,
                           Vec3f diffuseColor, Ray ray, Hit h, Vec3f normal){
 
@@ -156,16 +143,16 @@ Vec3f RayTracer::HitColor(const std::vector<LightSource*>& light, float ks, floa
 
     // We traverse all the light source
     for (auto & i : light){
-        Vec3f lightDir = (i->getPosition() - h.point).normalize();
+        Vec3f lightDir = i->direction(h.point);
         Vec3f halfwayVec = (lightDir + rayDir).normalize();
         float HdotV = std::max(0.f, halfwayVec.dotProduct(rayDir));
         float LdotN = std::max(0.f, lightDir.dotProduct(normal));
         Vec3f diffuse = kd * LdotN * diffuseColor;
         Vec3f specula = ks * powf(HdotV, se) * i->getIntensity();
-        AmbientLight = AmbientLight + (i->getIntensity() * LdotN);
+        AmbientLight = AmbientLight + (i->getIntensity() * 0.2);
         ColorOfAllLights = ColorOfAllLights + (diffuse + specula);
     }
-    return (AmbientLight + ColorOfAllLights);
+    return ColorOfAllLights + AmbientLight;
 }
 
 /**

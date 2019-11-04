@@ -27,6 +27,8 @@ public:
     // Main function to create a light source with given parameters
     static LightSource* createLightSource(Value& LightSourceSpecs);
 
+    virtual Vec3f direction(Vec3f hitpoint)=0;
+
     // Getter and Setter
     Vec3f getPosition(){
         return this->position;

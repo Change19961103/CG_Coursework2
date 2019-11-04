@@ -19,6 +19,8 @@ public:
     // Constructors
     PointLight(Vec3f position, Vec3f intensity);
 
+    Vec3f direction(Vec3f hitpoint);
+
     // Destructors
 //    ~PointLight(){};
 

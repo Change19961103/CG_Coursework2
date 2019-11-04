@@ -3,8 +3,8 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="Ray Tracer" targetName="jsonexample" />
-      <config projectName="Ray Tracer" targetName="raytracer" />
       <config projectName="Ray Tracer" targetName="vectorexample" />
+      <config projectName="Ray Tracer" targetName="raytracer" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -13,7 +13,128 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="979db560-d001-4aad-aa48-f4139a7f9b45" name="Default Changelist" comment="" />
+    <list default="true" id="979db560-d001-4aad-aa48-f4139a7f9b45" name="Default Changelist" comment="Work on part of BVH">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/examples/jsonExample.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/examples/jsonExample.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/jsonexample.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/cameras/Pinhole.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/cameras/Pinhole.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/cameras/ThinLens.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/cameras/ThinLens.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/Camera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/Camera.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/LightSource.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/LightSource.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/RayTracer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/RayTracer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/Scene.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/Scene.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/Shape.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/core/Shape.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/lights/PointLight.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/lights/PointLight.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/main/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/main/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/BVH.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/BVH.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/examples/vecMatrixExample.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/examples/vecMatrixExample.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/vectorexample.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsonexample" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsonexample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/out.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/build/out.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/raytracer" beforeDir="false" afterPath="$PROJECT_DIR$/build/raytracer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/vectorexample" beforeDir="false" afterPath="$PROJECT_DIR$/build/vectorexample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/examples/jsonExample.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/jsonexample.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/cameras/Pinhole.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/cameras/Pinhole.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/cameras/ThinLens.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/cameras/ThinLens.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Camera.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Camera.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/LightSource.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/LightSource.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Material.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Material.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/RayTracer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/RayTracer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Scene.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Scene.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Shape.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/core/Shape.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/lights/AreaLight.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/lights/AreaLight.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/lights/PointLight.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/lights/PointLight.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/main/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/main/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/materials/BlinnPhong.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/BVH.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/BVH.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/Sphere.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/TriMesh.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/raytracer.dir/shapes/Triangle.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/examples/vecMatrixExample.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vectorexample.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Ray Tracer.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Ray Tracer.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/out.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/out.ppm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/raytracer" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/raytracer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/LightSource.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/LightSource.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Material.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/Material.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Material.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/Material.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/RayTracer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/RayTracer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Shape.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/Shape.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Shape.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/Shape.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lights/PointLight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lights/PointLight.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lights/PointLight.h" beforeDir="false" afterPath="$PROJECT_DIR$/lights/PointLight.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/BVH.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/BVH.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/BVH.h" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/BVH.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/Planar_quad.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/Planar_quad.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/Planar_quad.h" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/Planar_quad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/Sphere.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/Sphere.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/Sphere.h" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/Sphere.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/Triangle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/Triangle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes/Triangle.h" beforeDir="false" afterPath="$PROJECT_DIR$/shapes/Triangle.h" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +145,15 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1SnfTyyUfbS18wo7Bji3pCamlEy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -34,7 +161,12 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shapes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -85,19 +217,74 @@
       <workItem from="1572305153638" duration="45586000" />
       <workItem from="1572472290523" duration="10935000" />
       <workItem from="1572548412211" duration="13474000" />
+      <workItem from="1572643424798" duration="3479000" />
+      <workItem from="1572701822018" duration="58631000" />
     </task>
+    <task id="LOCAL-00001" summary="Work on part of BVH">
+      <created>1572709621331</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572709621331</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Work on part of BVH">
+      <created>1572734193304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572734193304</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix basic raytracer bug, and almost finish BVH(small bug)">
+      <created>1572750644598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572750644598</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Try to work on Texture Mapping">
+      <created>1572801064554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572801064554</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Work on part of BVH" />
+    <MESSAGE value="Fix basic raytracer bug, and almost finish BVH(small bug)" />
+    <MESSAGE value="Try to work on Texture Mapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to work on Texture Mapping" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/shapes/Sphere.cpp</url>
-          <line>56</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/core/RayTracer.cpp</url>
+          <line>65</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/core/RayTracer.cpp</url>
+          <line>146</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

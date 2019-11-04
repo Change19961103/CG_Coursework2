@@ -9,6 +9,7 @@
 #include "core/RayHitStructs.h"
 #include "core/Material.h"
 #include "rapidjson/document.h"
+#include "opencv2/opencv.hpp"
 
 
 using namespace rapidjson;
@@ -41,7 +42,7 @@ public:
 
     virtual Vec3f getAABBMin()=0;
 
-    virtual Vec2f MapTexture(Hit h)=0;
+    virtual Vec3f MapTexture(Hit h)=0;
 
 
 

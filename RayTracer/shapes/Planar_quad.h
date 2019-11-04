@@ -10,8 +10,8 @@ namespace  rt {
 
     public:
 
-        Planar_quad(float a, float b, float c, float d)
-                : triangle2(Triangle(d,b,c)), triangle1(Triangle(a,b,c)) {
+        Planar_quad(Vec3f a, Vec3f b, Vec3f c, Vec3f d, std::string texture_dir)
+                : triangle2(Triangle(d,b,c, texture_dir)), triangle1(Triangle(a,b,c, texture_dir)) {
         }
 
         Hit intersect(Ray ray);
@@ -24,7 +24,7 @@ namespace  rt {
 
         Vec3f getAABBMin();
 
-        Vec2f MapTexture(Hit h);
+        Vec3f MapTexture(Hit h);
 
     private:
         Triangle triangle1;

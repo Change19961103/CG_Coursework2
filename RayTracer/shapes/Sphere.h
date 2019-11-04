@@ -23,7 +23,13 @@ public:
 	//
 	Sphere();
 
-	Sphere(Vec3f center, float radius):center(center), radius(radius){
+	Sphere(Vec3f center, float radius, std::string texture_dir):center(center), radius(radius){
+	    if (texture_dir == ""){
+            hasTexutre = false;
+	    } else {
+            this->texture_img = cv::imread(texture_dir, 1);
+            hasTexutre = true;
+        }
 	};
 
 	virtual ~Sphere();
@@ -42,7 +48,7 @@ public:
 
     Vec3f CalculateNorm(Hit h);
 
-    Vec2f MapTexture(Hit h);
+    Vec3f MapTexture(Hit h);
 
 
 //	float getRadius(){
@@ -60,6 +66,8 @@ private:
 	float radius;
 	Vec3f aabbMin;
 	Vec3f aabbMax;
+	cv::Mat texture_img;
+	bool hasTexutre;
 };
 
 

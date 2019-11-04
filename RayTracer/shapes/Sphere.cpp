@@ -59,18 +59,30 @@ namespace rt{
 		return h;
 	}
 
-	Vec2f Sphere::MapTexture(Hit h){
-        Vec3f normalized_hitpoint = Vec3f((h.point - center)[0]/radius,
-                (h.point - center)[1]/radius,
-                (h.point - center)[2]/radius);
-        float theta = acos(normalized_hitpoint[1]);
-        float phi = atan2(normalized_hitpoint[0], normalized_hitpoint[2]);
-        if (phi < 0)
-            phi += 2 * M_PI;
-        float u = phi / (2 * M_PI);
-        float v = theta / (M_PI);
-        return Vec2f(u, v);
+	Vec3f Sphere::MapTexture(Hit h){
+	    if (hasTexutre) {
+            Vec3f normalized_hitpoint = Vec3f((h.point - center)[0] / radius,
+                                              (h.point - center)[1] / radius,
+                                              (h.point - center)[2] / radius);
+            float theta = acos(normalized_hitpoint[1]);
+            float phi = atan2(normalized_hitpoint[0], normalized_hitpoint[2]);
+            if (phi < 0)
+                phi += 2 * M_PI;
+            float u = phi / (2 * M_PI);
+            float v = theta / (M_PI);
+            int width = texture_img.cols;
+            int height = texture_img.rows;
+            int mapping_x = (int) ((width - 1) * u);
+            int mapping_y = (int) ((height - 1) * v);
+            Vec3f diffuseColor = Vec3f(texture_img.at<cv::Vec3b>(mapping_y, mapping_x)[2]/255.0,
+                                       texture_img.at<cv::Vec3b>(mapping_y, mapping_x)[1]/255.0,
+                                       texture_img.at<cv::Vec3b>(mapping_y, mapping_x)[0]/255.0);
+            return diffuseColor;
+        } else {
+	        return material->getDc();
+	    }
 	}
+
 
 	Vec3f Sphere::CalculateNorm(Hit h){
         return (h.point - center).normalize();

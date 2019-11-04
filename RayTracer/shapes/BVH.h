@@ -28,7 +28,7 @@ public:
 
     void CalculateBox();
 
-    Vec2f MapTexture(Hit h);
+    Vec3f MapTexture(Hit h);
 
 
 

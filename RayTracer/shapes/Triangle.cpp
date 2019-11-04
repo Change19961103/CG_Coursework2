@@ -23,9 +23,9 @@ namespace rt{
         float det = edge1.dotProduct(p);
         Vec3f t;
         if (det > 0){
-            Vec3f t = ray.origin - v0;
+            t = ray.origin - v0;
         } else {
-            Vec3f t = v0 - ray.origin;
+            t = v0 - ray.origin;
             det = -det;
         }
 
@@ -85,8 +85,8 @@ namespace rt{
         return this->aabbMin;
     }
 
-    Vec2f Triangle::MapTexture(Hit h) {
-        return Vec2f();
+    Vec3f Triangle::MapTexture(Hit h) {
+        return material->getDc();
     };
 
     ;
